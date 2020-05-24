@@ -1,0 +1,20 @@
+<div class="col-md-6">
+  <h2 class="text-center">Login</h2>
+<form>
+  <div class="form-group">
+    <label for="name">Username</label>
+    <input type="name"  placeholder="username" [(ngModel)]="username" name="name" class="form-control" id="name">
+  </div>
+
+
+  <div class="form-group">
+    <label for="empId">Password</label>
+    <input type="password" placeholder="password" [(ngModel)]="password" name="Employee Id" class="form-control" id="employeeid">
+  </div>
+
+  <div class="form-group">
+    <button [disabled]="loading" (click)="login()" class="btn btn-primary">Login</button>&nbsp;
+    <button class="btn btn-success" (click)="createManager()">Register</button>
+</div>
+</form>
+</div>

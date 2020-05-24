@@ -1,0 +1,43 @@
+
+  <div class="col-md-6">
+    <h2 class="text-center">Registration</h2>
+  <form  #form="ngForm" (ngSubmit)="regManager(form)">
+    <div class="form-group">
+      <label for="firstname">Firstname</label>
+      <input type="name"  placeholder="firstname" [(ngModel)]="firstname" name="firstname_" class="form-control" id="firstname_">
+    </div>
+  
+    <div class="form-group">
+      <label for="lastname">Lastname</label>
+      <input type="name"  placeholder="lastname" [(ngModel)]="lastname" name="lastname_" class="form-control" id="lastname_">
+    </div>
+  
+  
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" placeholder="password" [(ngModel)]="password" name="password_" class="form-control" id="password_">
+    </div>
+  
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="name"  placeholder="address" [(ngModel)]="address" name="address_" class="form-control" id="address_">
+    </div>
+
+    <div class="form-group">
+      <label for="dob">DOB</label>
+      <input type="date"  placeholder="dob" [(ngModel)]="dob" name="dob" class="form-control" id="dob">
+    </div>
+  
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input type="name"  placeholder="company" [(ngModel)]="company" name="company_" class="form-control" id="company_">
+    </div>
+    
+    
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">Register</button>
+  </div>
+  </form>
+  </div>
+  
+  

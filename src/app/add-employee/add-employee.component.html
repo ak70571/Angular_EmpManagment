@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="col-md-6">
+  <h2 class="text-center">Employee Registration</h2>
+<form  #form="ngForm" (ngSubmit)="createEmployee(form)">
+  
+  <div class="form-group">
+    <label for="empid">Emp ID</label>
+    <input type="name"  placeholder="empid" [(ngModel)]="empid" name="empid" class="form-control" id="empid_">
+  </div>
+
+  <div class="form-group">
+    <label for="firstname">Firstname</label>
+    <input type="name"  placeholder="firstname" [(ngModel)]="firstname" name="firstname_" class="form-control" id="firstname_">
+  </div>
+
+  <div class="form-group">
+    <label for="lastname">Lastname</label>
+    <input type="name"  placeholder="lastname" [(ngModel)]="lastname" name="lastname_" class="form-control" id="lastname_">
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="name"  placeholder="address" [(ngModel)]="address" name="address_" class="form-control" id="address_">
+  </div>
+
+  <div class="form-group">
+    <label for="dob">DOB</label>
+    <input type="date"  placeholder="dob" [(ngModel)]="dob" name="dob" class="form-control" id="dob">
+  </div>
+
+  <div class="form-group">
+    <label for="mobile">Mobile</label>
+    <input type="number" placeholder="mobile" [(ngModel)]="mobile" name="mobile_" class="form-control" id="mobile_">
+  </div>
+
+  <div class="form-group">
+    <label for="city">City</label>
+    <input type="name"  placeholder="city" [(ngModel)]="city" name="city_" class="form-control" id="city_">
+  </div>
+  <div class="form-group">
+    <button [disabled]="loading" class="btn btn-primary">ADD Employee</button>
+</div>
+</form>
+</div>

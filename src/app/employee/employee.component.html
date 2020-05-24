@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="col-md-9">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Employe ID</th>
+    <th>Firstname</th>
+    <th>Address</th>
+    <th>Lastname</th>
+    <th>Date Of Birth</th>
+    <th>Mobile</th>
+    <th>City</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+          <td>{{employee.empid}}</td>
+          <td>{{employee.firstname}}</td>
+          <td>{{employee.address}}</td>
+          <td>{{employee.lastname}}</td>
+          <td>{{employee.dob}}</td>
+          <td>{{employee.mobile}}</td>
+          <td>{{employee.city}}</td>
+          <td><button class="btn btn-danger"
+            mwlConfirmationPopover
+            [popoverTitle]="popoverTitle"
+            [popoverMessage]="popoverMessage"
+            placement="left"
+            (cancel)="cancelClicked = true"
+            (confirm)="deleteEmployee(employee.empid)"> Delete Employee
+          </button></td>
+          </tr>
+    </tbody>
+  </table>
+</div>
